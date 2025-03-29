@@ -9,7 +9,7 @@
 <body>
   <!-- 视频背景 -->
   <video autoplay muted loop id="bgVideo">
-    <source src="background.mov" type="video/mp4">
+    <source src="background.mov" type="video/mp4" />
     Your browser does not support HTML5 video.
   </video>
 
@@ -43,7 +43,7 @@
         message.style.color = 'lightgreen';
         message.textContent = '登录成功，跳转中...';
         setTimeout(() => {
-          window.location.href = 'index.html'; // 进入 SPA 主界面
+          window.location.href = 'dashboard.html'; // ⬅️ ⬅️ 登录后跳转的目标页
         }, 1000);
       } else {
         message.style.color = 'red';
