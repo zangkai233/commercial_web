@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CEO Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- 侧边导航栏 -->
+  <div class="sidebar">
+    <h2>CEO Panel</h2>
+    <a href="#" data-page="dashboard" class="nav-link active"><i class="fas fa-chart-line"></i> Dashboard</a>
+    <a href="#" data-page="orders" class="nav-link"><i class="fas fa-box"></i> Orders</a>
+    <a href="#" data-page="customers" class="nav-link"><i class="fas fa-users"></i> Customers</a>
+    <a href="#" data-page="settings" class="nav-link"><i class="fas fa-cog"></i> Settings</a>
+  </div>
+
+  <!-- 主内容区域 -->
+  <div class="main">
+    <!-- Dashboard -->
+    <div id="dashboard" class="page active">
+      <h1>Welcome, Admin</h1>
+      <div class="cards">
+        <div class="card"><h3>Orders</h3><p>1,238</p></div>
+        <div class="card"><h3>Sales</h3><p>$89,720</p></div>
+        <div class="card"><h3>Users</h3><p>5,431</p></div>
+        <div class="card hot-products">
+          <h3>Top Products</h3>
+          <ul>
+            <li>🍎 Apple iPhone 15</li>
+            <li>🟠 Orange Hoodie</li>
+            <li>🚗 Tesla Model Y Toy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="chart-container">
+        <h3>Monthly Sales Trend</h3>
+        <canvas id="salesChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Orders -->
+    <div id="orders" class="page">
+      <h1>Orders</h1>
+      <p>Order table here...</p>
+    </div>
+
+    <!-- Customers -->
+    <div id="customers" class="page">
+      <h1>Customers</h1>
+      <p>Customer list here...</p>
+    </div>
+
+    <!-- Settings -->
+    <div id="settings" class="page">
+      <h1>Settings</h1>
+
+      <div class="setting-option">
+        <label>Font Size:</label>
+        <div class="btn-group" id="fontSizeBtns">
+          <button data-size="small">Small</button>
+          <button data-size="medium" class="active">Medium</button>
+          <button data-size="large">Large</button>
+        </div>
+      </div>
+
+      <div class="setting-option">
+        <label>Theme:</label>
+        <div class="btn-group" id="themeBtns">
+          <button data-theme="light" class="active">Light</button>
+          <button data-theme="dark">Dark</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
